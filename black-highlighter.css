@@ -1,0 +1,267 @@
+/* Black Highlighter Theme - Основные стили */
+
+:root {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --border-color: #333333;
+    --accent-color: #ff0000;
+    --secondary-color: #1a1a1a;
+    --dormitus-color: #00ff00;
+    --symphoros-color: #ffff00;
+    --corruptio-color: #ffa500;
+    --dominus-color: #ff0000;
+    --transition-speed: 0.3s;
+    --header-height: 80px;
+    --content-width: 1200px;
+}
+
+/* Общие стили */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Шапка и навигация */
+header {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    flex: 1;
+    min-width: 300px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.tagline {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Основной контент */
+main {
+    max-width: var(--content-width);
+    margin: calc(var(--header-height) + 2rem) auto 2rem;
+    padding: 0 1rem;
+}
+
+/* Стили для описания классов */
+.class-description {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 4px solid;
+    transition: transform var(--transition-speed);
+}
+
+.class-description:hover {
+    transform: translateX(5px);
+}
+
+/* Стили для таблицы классификации */
+.classification-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.classification-table th,
+.classification-table td {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.classification-table th {
+    background-color: var(--secondary-color);
+}
+
+/* Сетка для последних записей */
+.entries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Стили для досье */
+.featured-dossier {
+    margin-bottom: 3rem;
+}
+
+.scp-dossier {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.scp-dossier.featured {
+    border-left: 4px solid var(--accent-color);
+}
+
+.dossier-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.risk-level {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
+
+.dossier-content h4 {
+    color: var(--accent-color);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.dossier-content ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.dossier-content li {
+    margin-bottom: 0.3rem;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.scp-dossier {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .dossier-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .entries-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Стили для классов паразитов */
+.parasite-class {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.parasite-class.dormitus {
+    background-color: var(--dormitus-color);
+    color: var(--bg-color);
+}
+
+.parasite-class.symphoros {
+    background-color: var(--symphoros-color);
+    color: var(--bg-color);
+}
+
+.parasite-class.corruptio {
+    background-color: var(--corruptio-color);
+    color: var(--bg-color);
+}
+
+.parasite-class.dominus {
+    background-color: var(--dominus-color);
+    color: var(--bg-color);
+}
+
+/* Стили для описания классов */
+.class-description.dormitus {
+    border-left-color: var(--dormitus-color);
+}
+
+.class-description.symphoros {
+    border-left-color: var(--symphoros-color);
+}
+
+.class-description.corruptio {
+    border-left-color: var(--corruptio-color);
+}
+
+.class-description.dominus {
+    border-left-color: var(--dominus-color);
+} 

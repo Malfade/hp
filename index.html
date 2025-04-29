@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всемирное Агентство Биобезопасности - Главная</title>
+    <link rel="stylesheet" href="black-highlighter.css">
+    <script src="script.js" defer></script>
+    <meta name="description" content="База данных мутированных организмов и паразитов. Классификация, исследования, протоколы безопасности.">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="nav-toggle" aria-label="Открыть меню">☰</button>
+            <div class="logo">
+                <h1>Всемирное Агентство Биобезопасности</h1>
+                <p class="tagline">Секретность - наша защита, знание - наше оружие</p>
+            </div>
+            <nav class="nav-menu" role="navigation">
+                <a href="/">Главная</a>
+                <a href="/parasite-series">Серии паразитов</a>
+                <a href="/research">Исследования</a>
+                <a href="/protocols">Протоколы</a>
+                <a href="/about">О сайте</a>
+            </nav>
+            <form class="search-form" role="search">
+                <input type="search" placeholder="Поиск по ID или названию" aria-label="Поиск" />
+                <select name="class" aria-label="Фильтр по классу">
+                    <option value="">Все классы</option>
+                    <option value="dormitus">Dormitus</option>
+                    <option value="symphoros">Symphoros</option>
+                    <option value="corruptio">Corruptio</option>
+                    <option value="dominus">Dominus</option>
+                </select>
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-dossier">
+            <h2>Особо опасные объекты</h2>
+            <article class="scp-dossier featured" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 itemprop="name">HP-109-C-15 "Canis Lupus Corruptio"</h3>
+                <div class="dossier-header">
+                    <span class="parasite-class corruptio">Corruptio</span>
+                    <span class="risk-level">Уровень риска: III (Высокий)</span>
+                </div>
+                <div class="dossier-content">
+                    <h4>Описание</h4>
+                    <p itemprop="description">Штамм, адаптированный к плотной костной структуре волка. Демонстрирует следующие мутации:</p>
+                    <ul>
+                        <li>Увеличение мышечной массы на 280%</li>
+                        <li>Плотность скелета +45% (устойчивость к нагрузкам)</li>
+                        <li>Эмпатическая связь между особями («стадная телепатия»)</li>
+                    </ul>
+                    
+                    <h4>Опасности</h4>
+                    <ul>
+                        <li>При групповых выпадах демонстрирует спланированную охоту</li>
+                        <li>Может передавать мутирующие паттерны другим плотоядным</li>
+                        <li>Чрезмерная агрессия в условиях дефицита корма</li>
+                    </ul>
+
+                    <h4>Особые условия содержания</h4>
+                    <ul>
+                        <li>Изолированный вольер с металлическими стенами и двойными воротами</li>
+                        <li>Периодические электромагнитные импульсы для подавления телепатии</li>
+                        <li>Биометрический контроль: пульс, ЭЭГ, мускульная активность</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="scp-dossier featured" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 itemprop="name">HP-109-A-07 "Psittacus Symphoros"</h3>
+                <div class="dossier-header">
+                    <span class="parasite-class symphoros">Symphoros</span>
+                    <span class="risk-level">Уровень риска: II (Средний)</span>
+                </div>
+                <div class="dossier-content">
+                    <h4>Описание</h4>
+                    <p itemprop="description">Штамм, активирующий рост голосовых центров и расширяющий речевой спектр:</p>
+                    <ul>
+                        <li>Поддерживает имитацию чужой речи с точностью до 98%</li>
+                        <li>Создает ультразвуковые сигналы (до 35 кГц) для коммуникации</li>
+                        <li>Лёгкая когнитивная стимуляция хозяина</li>
+                    </ul>
+                    
+                    <h4>Опасности</h4>
+                    <ul>
+                        <li>Звуковые волны вызывают головные боли и спутанность сознания</li>
+                        <li>Способен «записывать» команды и контролировать других животных</li>
+                        <li>При массовом использовании — информационная зараза среди птиц</li>
+                    </ul>
+
+                    <h4>Особые условия содержания</h4>
+                    <ul>
+                        <li>Акустически глушащая камера с покрытием из звукопоглотителя</li>
+                        <li>Ограниченный контакт с другими живыми существами</li>
+                        <li>Регулярная смена аудиозаписей для десенсибилизации мозга</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <section class="classification" aria-labelledby="classification-heading">
+            <h2 id="classification-heading">Система классификации паразитов</h2>
+            
+            <article class="class-description dormitus" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 id="dormitus-desc" itemprop="name"><span class="parasite-class dormitus">Dormitus</span> (Спящий)</h3>
+                <p itemprop="description">Паразит в пассивной или стабильной форме. Не оказывает активного влияния на сознание, мутации минимальны, носитель контролирует поведение.</p>
+                <p><strong>Уровень контроля:</strong> Низкий</p>
+            </article>
+
+            <article class="class-description symphoros" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 id="symphoros-desc" itemprop="name"><span class="parasite-class symphoros">Symphoros</span> (Сопровождающий)</h3>
+                <p itemprop="description">Паразит вступает в симбиотические отношения с носителем. Повышает физические и ментальные показатели, но требует постоянного контроля.</p>
+                <p><strong>Уровень контроля:</strong> Средний</p>
+            </article>
+
+            <article class="class-description corruptio" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 id="corruptio-desc" itemprop="name"><span class="parasite-class corruptio">Corruptio</span> (Искажающий)</h3>
+                <p itemprop="description">Паразит активно изменяет нейронную структуру. Частичная потеря личности, внешние мутации становятся видимыми.</p>
+                <p><strong>Уровень контроля:</strong> Высокий</p>
+            </article>
+
+            <article class="class-description dominus" itemscope itemtype="http://schema.org/CreativeWork">
+                <h3 id="dominus-desc" itemprop="name"><span class="parasite-class dominus">Dominus</span> (Господствующий)</h3>
+                <p itemprop="description">Паразит полностью контролирует носителя. Имеет собственное поведение и цели. Носитель считается утраченным.</p>
+                <p><strong>Уровень контроля:</strong> Критический</p>
+            </article>
+
+            <table class="classification-table" aria-labelledby="classification-heading">
+                <thead>
+                    <tr>
+                        <th>Класс</th>
+                        <th>Название</th>
+                        <th>Состояние паразита</th>
+                        <th>Уровень риска</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="parasite-class dormitus">Dormitus</span></td>
+                        <td>Спящий</td>
+                        <td>Пассивный, безопасный</td>
+                        <td>Низкий</td>
+                    </tr>
+                    <tr>
+                        <td><span class="parasite-class symphoros">Symphoros</span></td>
+                        <td>Сопровождающий</td>
+                        <td>Симбиоз с носителем</td>
+                        <td>Средний</td>
+                    </tr>
+                    <tr>
+                        <td><span class="parasite-class corruptio">Corruptio</span></td>
+                        <td>Искажающий</td>
+                        <td>Мутации, частичный контроль</td>
+                        <td>Высокий</td>
+                    </tr>
+                    <tr>
+                        <td><span class="parasite-class dominus">Dominus</span></td>
+                        <td>Господствующий</td>
+                        <td>Полный захват сознания</td>
+                        <td>Критический</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="recent-entries" aria-labelledby="recent-heading">
+            <h2 id="recent-heading">Последние добавленные объекты</h2>
+            <div class="entries-grid">
+                <article class="scp-dossier" itemscope itemtype="http://schema.org/CreativeWork">
+                    <h3 itemprop="name">HP-109/B-01</h3>
+                    <p itemprop="description">Носитель способен прожить всю жизнь без внешних мутаций</p>
+                    <div class="parasite-class dormitus">Dormitus</div>
+                </article>
+                <article class="scp-dossier" itemscope itemtype="http://schema.org/CreativeWork">
+                    <h3 itemprop="name">HP-109/B-02</h3>
+                    <p itemprop="description">Повышенная регенерация, агрессия в условиях стресса</p>
+                    <div class="parasite-class symphoros">Symphoros</div>
+                </article>
+                <article class="scp-dossier" itemscope itemtype="http://schema.org/CreativeWork">
+                    <h3 itemprop="name">HP-109/B-03</h3>
+                    <p itemprop="description">Усиленные кости, ксеноморфные черты</p>
+                    <div class="parasite-class corruptio">Corruptio</div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Экстренная связь: █████████</p>
+                <p>Отдел исследований: █████████</p>
+            </div>
+            <div class="footer-section">
+                <h3>Предупреждение</h3>
+                <p>Данные в этом документе являются конфиденциальными. Несанкционированный доступ преследуется по закону.</p>
+            </div>
+            <div class="footer-section">
+                <p>© Всемирное Агентство Биобезопасности, 2025</p>
+                <p>Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
